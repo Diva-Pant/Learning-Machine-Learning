@@ -46,3 +46,18 @@ n2=math.floor(math.sqrt(repub['Party'].count()))
 # print(n2)
 imputer2 = KNNImputer(n_neighbors=n2)
 filling_valr = imputer2.fit_transform(repub.drop('Party', axis = 1))
+# print(type(filling_vald))
+# print(type(demo))
+# coverting numpy array to  panda dataframe
+d1 = pd.DataFrame(data = filling_vald, columns = ['h_infants', 'water_cost', 'adopt_budget', 'physician', 'salvador', 'religious', 'satellite', 'aid', 'missile', 'immigration', 'synfuels', 'education', 'superfund', 'crime', 'duty_free_exp', 'export_SA'])
+d1.insert(0,"Party", "democrat")
+# print(filling_vald)
+# print(d1)
+d2 = pd.DataFrame(data = filling_valr, columns = ['h_infants', 'water_cost', 'adopt_budget', 'physician', 'salvador', 'religious', 'satellite', 'aid', 'missile', 'immigration', 'synfuels', 'education', 'superfund', 'crime', 'duty_free_exp', 'export_SA'])
+d2.insert(0,"Party", "republican")
+# merging the dataset after cleaning
+frames = [d1,d2]
+f_c = pd.concat(frames)
+# converting the datatype back to object from float64
+print(f_c)
+
