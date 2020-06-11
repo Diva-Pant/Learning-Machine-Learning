@@ -1,3 +1,6 @@
 # Learning-Machine-Learning
 Learning ML | 
-My story of learning ML, when I realized that I don't have to fear it!
+/n
+Learning everyday by building projects, making mistakes, learning from mistakes.
+
+
